@@ -204,7 +204,14 @@
 
             // 헤더 클릭 시 스크롤 이벤트 활성화
             navLinks.forEach(link => {
-                link.addEventListener('click', enableScroll);
+                link.addEventListener('click', () => {
+                    enaleScroll();
+                });
+            });
+
+            // 베너 클릭 시 스크롤 이벤트 비활성화
+            document.querySelector('.banner').addEventlistener('click', () => {
+                disableScroll();
             });
         });
     </script>
